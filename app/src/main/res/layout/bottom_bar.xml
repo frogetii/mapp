@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <TextView
+        android:text="CASH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="50dp"
+        android:layout_marginStart="0dp"
+        android:id="@+id/cash" />
+
+    <TextView
+        android:text="M-PESA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:layout_marginEnd="0dp"
+        android:layout_alignTop="@+id/cash"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/mpesa" />
+
+    <TextView
+        android:text="VISA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mpesa"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="50dp"
+        android:layout_marginEnd="0dp"
+        android:id="@+id/visa" />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">MShopping</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_items">ItemsActivity</string>
+    <string name="large_text">Hello world</string>
+    <string name="title_activity_basket">BasketActivity</string>
+    <string name="title_activity_finish">FinishActivity</string>
+    <string name="title_activity_location">LocationActivity</string>
+    <string name="title_activity_drinks">DrinksActivity</string>
+    <string name="google_place_api">AIzaSyALhqYNPZcyZth6x6LJQFbnqrM0z3-6_1k</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delivery">Average waiting time 30 minutes Your good’s will deliver by Mark Call Office +254080800</string>
+    <string name="thankyou">Thank you for using</string>
+    <string name="feedback">Give you feed back</string>
+    <string name="feedbackhint">Best experience ...</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_navigation">navigation</string>
+    <string name="menu_call">Call Mark</string>
+    <string name="menu_exit">Exit and Wait for Delivery</string>
+    <string name="action_done">Done</string>
+    <string name="title_activity_vegetables">VegetablesActivity</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="min_purchase_amount">Atleast make a purchase of KES 1,000 or more</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/payment"
+            android:icon="@drawable/money50"
+            android:title="Payment" />
+        <item
+            android:id="@+id/orders"
+            android:icon="@drawable/orderdelivered50"
+            android:title="Your Orders" />
+        <item
+            android:id="@+id/twitter"
+            android:icon="@drawable/twitter48"
+            android:visible="true"
+            android:title="Twitter" />
+        <item
+            android:id="@+id/facebook"
+            android:icon="@drawable/facebookm48"
+            android:visible="true"
+            android:title="Facebook" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/settings50"
+            android:title="Settings" />
+    </group>
+
+    <item android:title="Legal">
+        <menu>
+            <item
+                android:id="@+id/terms"
+                android:title="Terms $ Conditions" />
+        </menu>
+    </item>
+
+</menu>
