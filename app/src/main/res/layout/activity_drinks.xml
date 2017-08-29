@@ -13,8 +13,10 @@
 
     <ExpandableListView
         android:id="@+id/lvExp"
+        style="@android:style/Widget.DeviceDefault.ExpandableListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/common_google_signin_btn_text_dark_disabled"
         android:scrollbars="none|horizontal"></ExpandableListView>
 
 

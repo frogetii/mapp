@@ -2,6 +2,8 @@ package ke.co.mapp.mapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -266,7 +268,24 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.twitter) {
 
+            Intent intent = null;
+            try {
+                // get the Twitter app if possible
+                this.getPackageManager().getPackageInfo("com.twitter.android", 0);
+                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?user_id=401380530"));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            } catch (Exception e) {
+                // no Twitter app, revert to browser
+                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/Aboue_"));
+            }
+            this.startActivity(intent);
+
         } else if (id == R.id.facebook) {
+
+            Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+            String facebookUrl = getFacebookPageURL(this);
+            facebookIntent.setData(Uri.parse(facebookUrl));
+            startActivity(facebookIntent);
 
         } else if (id == R.id.settings) {
 
@@ -277,6 +296,25 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    public static String FACEBOOK_URL = "https://www.facebook.com/casphedsys";
+    public static String FACEBOOK_PAGE_ID = "1858675771032174";
+
+    //method to get the right URL to use in the intent
+    public String getFacebookPageURL(Context context) {
+        PackageManager packageManager = context.getPackageManager();
+        try {
+            int versionCode = packageManager.getPackageInfo("com.facebook.katana", 0).versionCode;
+            if (versionCode >= 3002850) { //newer versions of fb app
+                return "fb://facewebmodal/f?href=" + FACEBOOK_URL;
+            } else { //older versions of fb app
+                return "fb://page/" + FACEBOOK_PAGE_ID;
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            return FACEBOOK_URL; //normal web url
+        }
     }
 
 }
