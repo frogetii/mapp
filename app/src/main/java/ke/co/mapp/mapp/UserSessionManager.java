@@ -36,6 +36,12 @@ public class UserSessionManager {
     public static final String KEY_EMAIL = "email";
     // Phone address
     public static  final String KEY_PHONE = "phone";
+//    // Username
+//    public static  final String KEY_USERNAME = "username";
+//    // Place address
+//    public static  final String KEY_ADDRESS = "address";
+//    // Order
+//    public static  final String KEY_ORDER = "order";
 
     // Constructor
     public UserSessionManager(Context context) {

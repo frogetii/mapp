@@ -52,8 +52,8 @@ public class DrinksFragment extends Fragment
 
     JSONArray resultsCat = null;
 
-    String JsonURLProd = "http://m-shopping.herokuapp.com/products/?format=json";
-    String JsonURLCat = "http://m-shopping.herokuapp.com/categories/?format=json";
+    String JsonURLProd = "http://m-shopping.herokuapp.com/api/products/?format=json";
+    String JsonURLCat = "http://m-shopping.herokuapp.com/api/categories/?format=json";
 
     @Nullable
     @Override
@@ -147,7 +147,7 @@ public class DrinksFragment extends Fragment
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                Toast.makeText(getContext(), "Something went wrong, check your internet connection", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Something went wrong, try again later", Toast.LENGTH_SHORT).show();
             }
 
         }

@@ -31,6 +31,7 @@ import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
 
+
 import org.w3c.dom.Text;
 
 import android.support.v4.view.ViewPager;
@@ -263,8 +264,14 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.payment) {
-            // Handle the camera action
+
+            Toast.makeText(this, "cash on delivery", Toast.LENGTH_LONG).show();
+            return true;
+
         } else if (id == R.id.orders) {
+
+            Toast.makeText(this, "Coming soon", Toast.LENGTH_LONG).show();
+            return true;
 
         } else if (id == R.id.twitter) {
 
@@ -272,11 +279,11 @@ public class MainActivity extends AppCompatActivity
             try {
                 // get the Twitter app if possible
                 this.getPackageManager().getPackageInfo("com.twitter.android", 0);
-                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?user_id=401380530"));
+                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?user_id=881619281452072960"));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             } catch (Exception e) {
                 // no Twitter app, revert to browser
-                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/Aboue_"));
+                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/mshoppingke"));
             }
             this.startActivity(intent);
 
@@ -289,7 +296,15 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.settings) {
 
+            Toast.makeText(this, "Coming soon", Toast.LENGTH_LONG).show();
+            return true;
+
         } else if (id == R.id.terms) {
+
+
+            Intent intent = new Intent(this,TermsActivity.class);
+            this.startActivity(intent);
+            return true;
 
         }
 
@@ -299,8 +314,8 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    public static String FACEBOOK_URL = "https://www.facebook.com/casphedsys";
-    public static String FACEBOOK_PAGE_ID = "1858675771032174";
+    public static String FACEBOOK_URL = "https://www.facebook.com/mshopingKE";
+    public static String FACEBOOK_PAGE_ID = "664521996980501";
 
     //method to get the right URL to use in the intent
     public String getFacebookPageURL(Context context) {

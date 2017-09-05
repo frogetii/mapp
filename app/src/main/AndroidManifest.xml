@@ -79,7 +79,11 @@
         <activity android:name=".DrinksActivity" />
         <activity android:name=".JsonActivity" />
         <activity android:name=".Json2Activity" />
-        <activity android:name=".TryActivity"></activity>
+        <activity android:name=".TryActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".TermsActivity"></activity>
     </application>
 
 </manifest>
